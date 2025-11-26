@@ -1,0 +1,5 @@
+Fairmont,5,300.00
+Holiday Inn,4,150.99
+Sandman,3,120.00
+Four Seasons,5,450.50
+Ramada,3,89.99
