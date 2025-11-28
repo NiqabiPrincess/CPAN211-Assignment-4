@@ -38,12 +38,13 @@ public class HotelGUI extends Application{
 		
 		Button sortStarsButton = new Button("Sort by Stars");
         Button sortPriceButton = new Button("Sort by Price");
-        
+        Button saveButton = new Button("Save to File");
+
         sortStarsButton.setOnAction(e -> sortByStars());
         sortPriceButton.setOnAction(e -> sortByPrice());
         
         VBox layout = new VBox(10);
-        layout.getChildren().addAll(hotelListView, sortStarsButton, sortPriceButton);
+		layout.getChildren().addAll(hotelListView, sortStarsButton, sortPriceButton, saveButton);
         
         Scene scene = new Scene(layout, 400, 400);
         primaryStage.setScene(scene);
