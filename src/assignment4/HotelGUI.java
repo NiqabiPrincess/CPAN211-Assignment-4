@@ -31,22 +31,29 @@ public class HotelGUI extends Application{
         Button sortPriceButton = new Button("Sort by Price");
         Button saveButton = new Button("Save to File");
 
+		sortStarsButton.setPrefWidth(150);
+        sortPriceButton.setPrefWidth(150);
+		saveButton.setPrefWidth(150);
+
         sortStarsButton.setOnAction(e -> sortByStars());
         sortPriceButton.setOnAction(e -> sortByPrice());
 
 		saveButton.setOnAction(e -> {
          try (PrintWriter writer = new PrintWriter("Sorted.txt")) {
-        for (Hotel hotel : hotels) {
+     		 for (Hotel hotel : hotels) {
             writer.println(hotel.toString());
-        }
+       		 }
         } catch (Exception ex) {
-        ex.printStackTrace();
+       		 ex.printStackTrace();
         }
                           });
 
 		
-		VBox layout = new VBox(10);
-		layout.getChildren().addAll(hotelListView, sortStarsButton, sortPriceButton, saveButton);
+         VBox layout = new VBox(15);
+         layout.setPadding(new javafx.geometry.Insets(15));
+         layout.setAlignment(javafx.geometry.Pos.CENTER);
+		 layout.getChildren().addAll(hotelListView, sortStarsButton, sortPriceButton, saveButton);
+
         
         Scene scene = new Scene(layout, 400, 400);
         primaryStage.setScene(scene);
