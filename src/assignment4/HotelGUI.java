@@ -2,19 +2,18 @@ package assignment4;
 
 import javafx.application.Application;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import javafx.stage.FileChooser;
 
+import java.io.File;
+import java.io.PrintWriter;
 import java.util.List;
 import java.util.Collections;
 import java.util.Comparator;
