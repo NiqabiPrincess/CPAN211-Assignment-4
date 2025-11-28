@@ -13,7 +13,10 @@ public class Main {
         System.out.println("=== Hotels Sorted by Stars → Name ===");
         for (Hotel h : hotels) {
             System.out.println(h);
+            
         }
+        
+        HotelGUI.launch(HotelGUI.class, args);
     }
 }
 
